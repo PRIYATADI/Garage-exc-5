@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace GarageProject
 {
-     public class Program
+    public class GarageHandler
     {
-        static void Main(string[] args)
-        {
-            List<Vehicle> vehicle = new List<Vehicle>();
-
-        }
+        public void 
     }
 }
