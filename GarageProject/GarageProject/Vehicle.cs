@@ -29,8 +29,8 @@ namespace GarageProject
             Color = color;
             Number_Of_Wheels = number_of_wheels;
             Model = model;
-            
 
+            Console.ReadLine();
         }
     }
 }

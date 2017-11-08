@@ -20,7 +20,9 @@ namespace GarageProject
             base(registration_number, color, number_of_wheels, model)
         {
             Number_Of_Motor= number_of_motor;
+            Console.ReadLine();
         }
+        
 
     }
 }

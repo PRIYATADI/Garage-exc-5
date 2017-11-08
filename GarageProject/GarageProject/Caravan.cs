@@ -19,6 +19,7 @@ namespace GarageProject
             base(registration_number, color, number_of_wheels, model)
         {
             How_Many_Rooms = how_many_rooms;
+            Console.ReadLine();
         }
 
     }

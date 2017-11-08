@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace GarageProject
 {
-    public class GarageHandler
+    class VehicleUI
     {
-        public void 
+
     }
 }

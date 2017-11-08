@@ -20,6 +20,7 @@ namespace GarageProject
             base(registration_number, color, number_of_wheels, model)
         {
             Automatic_Or_Gear= automatic_or_gear;
+            Console.ReadLine();
         }
     }
 }

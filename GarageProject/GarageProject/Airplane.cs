@@ -20,6 +20,7 @@ namespace GarageProject
             base(registration_number, color, number_of_wheels, model)
         {
             Length_Of_Wing= length_of_wing;
+            Console.ReadLine();
         }
     }
 }

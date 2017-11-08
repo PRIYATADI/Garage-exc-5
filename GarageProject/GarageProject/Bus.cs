@@ -20,6 +20,7 @@ namespace GarageProject
             base(registration_number, color, number_of_wheels, model)
         {
             Number_Of_Seats= number_of_seats;
+            Console.ReadLine();
         }
 
     }

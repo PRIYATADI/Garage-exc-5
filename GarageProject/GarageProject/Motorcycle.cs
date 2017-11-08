@@ -20,6 +20,7 @@ namespace GarageProject
             base(registration_number, color, number_of_wheels, model)
         {
             Fuel_Type= fuel_type;
+            Console.ReadLine();
         }
 
     }
