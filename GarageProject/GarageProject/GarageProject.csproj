@@ -43,17 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Airplane.cs" />
-    <Compile Include="Boat.cs" />
-    <Compile Include="Bus.cs" />
-    <Compile Include="Car.cs" />
-    <Compile Include="Caravan.cs" />
     <Compile Include="Garage.cs" />
-    <Compile Include="Motorcycle.cs" />
+    <Compile Include="GarageHandler.cs" />
+    <Compile Include="MainMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInterface.cs" />
+    <Compile Include="Vehicles\Airplane.cs" />
+    <Compile Include="Vehicles\Boat.cs" />
+    <Compile Include="Vehicles\Bus.cs" />
+    <Compile Include="Vehicles\Car.cs" />
+    <Compile Include="Vehicles\Helicopter.cs" />
+    <Compile Include="Vehicles\Moped.cs" />
+    <Compile Include="Vehicles\Motorcycle.cs" />
     <Compile Include="Vehicle.cs" />
+    <Compile Include="Vehicles\Van.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
