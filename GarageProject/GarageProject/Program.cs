@@ -18,24 +18,24 @@ namespace GarageProject
             //            Vehicle cc = new Vehicle();
             //cc.MainMenu();
             //        }
+            Garage<Vehicle> ga = new Garage<Vehicle>(100); 
 
-            //Vehicle vehicle = new Vehicle();
-            //List<Vehicle> vehicleList = new List<Vehicle>();
-            //vehicleList.Add(vehicle.CreateParkedVehicle(6, "Car", "Billy", "Ceaser", "BUH 170", "red", 4, 2, 1));
-            //vehicleList.Add(vehicle.CreateParkedVehicle(78, "Airplain", "Bhanu", "Vakamalla", " ", "black", 150, 58, 2));
-            //vehicleList.Add(vehicle.CreateParkedVehicle(198, "Helicopter", "Sai", "Bodimallu", " ", "white", 170, 70, 3));
-            //vehicleList.Add(vehicle.CreateParkedVehicle(34, "Moped", "Tanishca", "Bodimallu", " ", "blue", 120, 25, 1));
-            //vehicleList.Add(vehicle.CreateParkedVehicle(111, "Boat", "Varnica", "Bodimallu", " ", "green", 80, 12, 4));
+            List<Vehicle> vehicleList = new List<Vehicle>();
+            vehicleList.Add(new Vehicle(6, "Car", "Billy", "Ceaser", "BUH 170", "red", 4, 2, 1));
+            vehicleList.Add(new Vehicle(78, "Airplain", "Bhanu", "Vakamalla", " ", "black", 150, 58, 2));
+            vehicleList.Add(new Vehicle(198, "Helicopter", "Sai", "Bodimallu", " ", "white", 170, 70, 3));
+            vehicleList.Add(new Vehicle(34, "Moped", "Tanishca", "Bodimallu", " ", "blue", 120, 25, 1));
+            vehicleList.Add(new Vehicle(111, "Boat", "Varnica", "Bodimallu", " ", "green", 80, 12, 4));
 
             ////"Lamborgini"
             ////(Vehicle veh, int id, string fName, string lName, string registrationNumber, string type, string color, int numberOfWheels, int numberOfSeats, int numberOfEngines, DateTime parkingTime)
 
-            //foreach (Vehicle v in vehicleList)
-            //{
-            //    Console.WriteLine(vehicle.PrintParkedVehicle(v));
-            //}
+            foreach (Vehicle v in vehicleList)
+            {
+                Console.WriteLine(v.PrintParkedVehicle());
+            }
 
-            //Console.ReadLine();
+            Console.ReadLine();
 
 
         }

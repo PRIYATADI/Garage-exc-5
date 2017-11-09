@@ -39,28 +39,20 @@ namespace GarageProject
         public int Count { get { return count; } private set { count = value; } }
 
       
-        public Garage(T input)
+        public Garage(int capacity)
 
         {
             /*
             * We make sure that the type of the in parameter "input" is of the type Vehicle/Car
             * or a child of it
               */
-            if (typeof(Vehicle).IsAssignableFrom(input.GetType()))
-            {
-                capacity = ((input as Vehicle).numberOfSeats % 3) + 7;
+           
                 garageArray = new T[capacity];
-            }
+            
             /*
             * otherwise we ensure that in the garage will only be the founding vehicle
             */
-            else
-            {
-                capacity = 1;
-                garageArray = new T[1];
-            }
-            garageArray[0] = input;
-            Count = 1;
+           
         }
 
         /*
