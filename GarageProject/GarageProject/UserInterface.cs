@@ -35,17 +35,17 @@ namespace GarageProject
                 //    //
                 //    Console.WriteLine("Please enter some input!");
                 //}
-                string Choise = Console.ReadLine();
+                string Choice = Console.ReadLine();
                 int iChoice;
-                if (int.TryParse(Choise, out iChoice))
+                if (!int.TryParse(Choice, out iChoice))
                 {
-                    //Console.WriteLine("Invalid input!");
-                    //Console.ReadLine();
-                //}
-                //else break;
-               // Console.Clear();
+                    Console.WriteLine("Invalid input!");
+                    Console.ReadLine();
+                }
+                else break;
+                Console.Clear();
               
-                switch (iChoise)
+                switch (iChoice)
                 {
                     case '1':
                         CreateNewGarage();
@@ -75,10 +75,10 @@ namespace GarageProject
                         Console.ReadLine();
                         break;
                 }
-            }
-        }      
-        while (nav);
-    }   
+            
+            }      
+            while (nav);
+          }
      //Create a new garage by        
     //Setting maximum Capacity Of The Garage
     public int MaximumRequiredCapacity;
@@ -109,9 +109,10 @@ namespace GarageProject
                     string newInput = Console.ReadLine();
                     switch (newInput)
                     {
-                        case "1";
+                        case "1":
+                        
                             break;
-                        case "0";
+                        case "0":
                             return;
                         default:
                             break;
@@ -242,8 +243,8 @@ namespace GarageProject
                                         newBoat.WithMast = bool.Parse(myBoatWithMast);
                                         Console.WriteLine("Type 'true' if your boat has motor or \n" +
                                             "'false' if it doesn't, please! ");
-                                        var myBoatwithMotor = Console.ReadLine();
-                                        newBoat.withMotor = bool.Parse(myBoatwithMotor);
+                                        var myBoatWithMotor = Console.ReadLine();
+                                        newBoat.WithMotor = bool.Parse(myBoatWithMotor);
                                         entireCapacity.ParkSpecificVehiclesInGarage(newBoat);
                                         break;
 
@@ -366,10 +367,10 @@ namespace GarageProject
                                         newHelicopter.Model = myHelicopterModel;
                                         Console.WriteLine("Type the number of seats, please! ");
                                         var myHelicopterNumberOfSeats = Console.ReadLine();
-                                        newAirplane.NumberOfSeats = int.Parse(myHelicopterNumberOfSeats);
+                                        newHelicopter.NumberOfSeats = int.Parse(myHelicopterNumberOfSeats);
                                         Console.WriteLine("Type the number of wheels, please! ");
                                         var myHelicopterNumberOfWheels = Console.ReadLine();
-                                        newAirplane.NumberOfWheels = int.Parse(myHelicopterNumberOfWheels);
+                                        newHelicopter.NumberOfWheels = int.Parse(myHelicopterNumberOfWheels);
                                         Console.WriteLine("Type the number of windoors, please! ");
                                         var myHelicopterNumberOfWings = Console.ReadLine();
                                         newHelicopter.NumberOfWings = int.Parse(myHelicopterNumberOfWings);
@@ -581,7 +582,9 @@ namespace GarageProject
         {
             ;
         }
+
     void SearchAVehicleInGarage()
+            {;}
     void ListAllVehiclesInGarageWithARequiredProperty()
      {
      ;

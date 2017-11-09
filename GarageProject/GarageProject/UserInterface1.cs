@@ -41,9 +41,8 @@ namespace GarageProject
                     string newInput= Console.ReadLine();
                     switch (newInput)
                     {
-                        case "2";
-                            break;
-                        case "0";
+                        case "2":                            break;
+                        case "0":
                             return;
                         default:
                             break;

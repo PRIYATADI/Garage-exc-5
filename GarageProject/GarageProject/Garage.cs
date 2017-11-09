@@ -55,7 +55,7 @@ namespace GarageProject
        
          //Add vehicles into garage
        
-        public void ParkSpecificVehiclesIntoTheGarage(T input)
+        public void ParkSpecificVehicle(T input)
         {
             if (maxCapacity - nrVehicles.Count <= 0)
             {
@@ -80,7 +80,7 @@ namespace GarageProject
             }
             //Remove vehicles from the garage
 
-            public void unparkSpecificVehiclesFromTheGarage(T input)
+            public void unparkSpecificVehicle(T input)
         {
             string unparkRegistrationNumber = input.RegistrationNumber;
             var match = nrVehicles.Where(stc => stc.RegistrationNumber.Equals(unparkRegistrationNumber));
@@ -127,16 +127,16 @@ namespace GarageProject
             else
             {
                 foreach (var veh in nrVehicles)
-                    { 
+                { 
                     Console.WriteLine(vehic.VehicleInformations());
-                    }
+                }
                 Console.WriteLine("The total number of the parked vehicles is :" + nrVehicles.Count.ToString());
             }
             Console.ReadLine();
-        }
+            }
 
             //List of the all types of vehicles that are now parked in the garaj:
-            public void ListAllVehiclesTypesCurrentlyParkedInTheGarage()
+            public void ListAllVehiclesTypesCurrentlyParked()
             {
             Console.Clear();
             int airCount = nrVehicles.Where(x => x.Type.Equals("AIRPLANE")).Count();
@@ -149,16 +149,16 @@ namespace GarageProject
             Console.WriteLine("There are: " + busCount + "in the garage");
 
             int carCount = nrVehicles.Where(x => x.Type.Equals("CAR")).Count();
-            Console.WriteLine("There are: " + helicopterCount + "in the garage");
+            Console.WriteLine("There are: " + carCount + "in the garage");
 
             int helicopterCount = nrVehicles.Where(x => x.Type.Equals("HELICOPTER")).Count();
             Console.WriteLine("There are: " + helicopterCount + "in the garage");
 
             int mopedCount = nrVehicles.Where(x => x.Type.Equals("MOPED")).Count();
-            Console.WriteLine("There are: " + motorcycleCount + "in the garage");
+            Console.WriteLine("There are: " + mopedCount + "in the garage");
 
             int motorcycleCount = nrVehicles.Where(x => x.Type.Equals("MOTORCYCLE")).Count();
-            Console.WriteLine("There are: " + mopedCount + "in the garage");
+            Console.WriteLine("There are: " + motorcycleCount + "in the garage");
 
             int vanCount = nrVehicles.Where(x => x.Type.Equals("VAN")).Count();
             Console.WriteLine("There are: " + vanCount + "in the garage");
@@ -172,7 +172,7 @@ namespace GarageProject
             "The capacity of the garage is :" + maxCapacity +
             "\n-----------------------------------------------------");
             Console.ReadLine();
-        }
+            }
 
          /*
          *These functions are what lets us implement the IEnumerable interface
@@ -232,7 +232,7 @@ namespace GarageProject
                 }
 
             }
-        }
+    }
             //public void SearchByNumberOfWheels(T wSearch)
             //{
             //    int searched = wSearch.NumberOfWheels;
@@ -291,7 +291,5 @@ namespace GarageProject
             //    }
 
             //}
-        }
-
-    }
+ }
                   
