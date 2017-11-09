@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GarageProject.Vehicle
+namespace GarageProject.Vehicles
 {
     public  class Car : Vehicle
     {
