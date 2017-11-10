@@ -203,7 +203,7 @@ namespace GarageProject
                                         var myAirplanewingsLength = Console.ReadLine();
                                         newAirplane.WingsLength = float.Parse(myAirplanewingsLength); 
 
-                                        entireCapacity.ParkSpecificVehiclesInGarage(newAirplane);
+                                        entireCapacity.ParkSpecificVehicle(newAirplane);
                                         break;
 
                                     //boats
@@ -245,7 +245,7 @@ namespace GarageProject
                                             "'false' if it doesn't, please! ");
                                         var myBoatWithMotor = Console.ReadLine();
                                         newBoat.WithMotor = bool.Parse(myBoatWithMotor);
-                                        entireCapacity.ParkSpecificVehiclesInGarage(newBoat);
+                                        entireCapacity.ParkSpecificVehicle(newBoat);
                                         break;
 
                                     //bus
@@ -296,7 +296,7 @@ namespace GarageProject
                                         var myBusNumberOfDoubleSeats = Console.ReadLine();
                                         newBus.NumberOfDoubleSeats = int.Parse(myBusNumberOfDoubleSeats); 
 
-                                        entireCapacity.ParkSpecificVehiclesInGarage(newBus);
+                                        entireCapacity.ParkSpecificVehicle(newBus);
                                         break;
                                   
                                    // cars
@@ -346,7 +346,7 @@ namespace GarageProject
                                         Console.WriteLine("Type if your car is automatic or gear, please! ");
                                         var myCarIsAutomaticOrGear = Console.ReadLine();
                                         newCar.IsAutomaticOrGear = myCarIsAutomaticOrGear;
-                                        entireCapacity.ParkSpecificVehiclesInGarage(newCar);
+                                        entireCapacity.ParkSpecificVehicle(newCar);
                                         break;
                                       
                                     //helicopters
@@ -382,10 +382,10 @@ namespace GarageProject
                                         newHelicopter.NumberOfEngines = int.Parse(myHelicopternumberOfEngines);
                                         Console.WriteLine("Type the color, please! ");
                                         var myHelicoptercolor = Console.ReadLine();
-                                        newAirplane.Color = myHelicoptercolor;
+                                        newHelicopter.Color = myHelicoptercolor;
                                         Console.WriteLine("Type the parking time, please! ");
                                         var myHelicopterParkingTime = Console.ReadLine();
-                                        newAirplane.ParkingTime = DateTime.Parse(myHelicopterParkingTime);
+                                        newHelicopter.ParkingTime = DateTime.Parse(myHelicopterParkingTime);
                                         Console.WriteLine("Type unparking time, please! ");
                                         var myHelicopterUnparkingTime = Console.ReadLine();
                                         newHelicopter.UnparkingTime = DateTime.Parse(myHelicopterUnparkingTime);
@@ -395,7 +395,7 @@ namespace GarageProject
                                         Console.WriteLine("Type the width, please! ");
                                         var myHelicopterWidth = Console.ReadLine();
                                         newHelicopter.Width = float.Parse(myHelicopterWidth);
-                                        entireCapacity.ParkSpecificVehiclesInGarage(newHelicopter);
+                                        entireCapacity.ParkSpecificVehicle(newHelicopter);
                                         break;
                                      
                                                                        
@@ -445,7 +445,7 @@ namespace GarageProject
                                         Console.WriteLine("Type the FuelType, please!");
                                         var myMopedFuelType = Console.ReadLine();
                                         newMoped.FuelType = myMopedFuelType;
-                                        entireCapacity.ParkSpecificVehiclesInGarage(newMoped);
+                                        entireCapacity.ParkSpecificVehicle(newMoped);
                                         break;
                                         
 
@@ -467,7 +467,7 @@ namespace GarageProject
                                         var myMotorcycleModel = Console.ReadLine();
                                         newMotorcycle.Model = myMotorcycleModel;
                                         Console.WriteLine("Type the number of seats, please! ");
-                                        var myMotocycleNumberOfSeats = Console.ReadLine();
+                                        var myMotorcycleNumberOfSeats = Console.ReadLine();
                                         newMotorcycle.NumberOfSeats = int.Parse(myMotorcycleNumberOfSeats);
                                         Console.WriteLine("Type the number of wheels, please! ");
                                         var myMotorcycleNumberOfWheels = Console.ReadLine();
@@ -496,7 +496,7 @@ namespace GarageProject
                                         Console.WriteLine("Type the motocycle lenght, please!");
                                         var myMotorcyclemotoLenght = Console.ReadLine();
                                         newMotorcycle.MotoLenght = float.Parse(myMotorcyclemotoLenght);
-                                        entireCapacity.ParkSpecificVehiclesInGarage(newMotorcycle);
+                                        entireCapacity.ParkSpecificVehicle(newMotorcycle);
                                         break;
                                        
                                     //Vans
@@ -543,7 +543,7 @@ namespace GarageProject
                                         Console.WriteLine("Type there are Places For Children, please!");
                                         var myVanWithSpecialPlacesForChildren = Console.ReadLine();
                                         newVan.WithSpecialPlacesForChildren = bool.Parse(myVanWithSpecialPlacesForChildren);
-                                        entireCapacity.ParkSpecificVehiclesInGarage(newVan);
+                                        entireCapacity.ParkSpecificVehicle(newVan);
                                         break;
                                     //
                                         case "0": //child case of "+" case
