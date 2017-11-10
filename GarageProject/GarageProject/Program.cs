@@ -15,8 +15,12 @@ namespace GarageProject
            //public abstract  void MainMenu();
 
             {
-             UserInterface cc = new UserInterface();
-                cc.CreateMainMenu();
+             UserInterface control = new UserInterface();
+                control.CreateMainMenu();
+            }
+            {
+                //Vehicle printList = new Vehicle();
+                //printList.PrintParkedVehicle(Vehicle veh);
             }
 
             //Vehicle vehicle = new Vehicle();

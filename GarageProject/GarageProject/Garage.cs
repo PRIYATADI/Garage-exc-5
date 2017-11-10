@@ -83,8 +83,31 @@ namespace GarageProject
             }
 
         }
-       
-    
+
+    //public int GarageSize(string vehType)
+    // {
+    //        { if (vehType == "Airplan")
+    //            {garageSize=Console.ReadLine() }
+    //           elseif (vehType == "Boat"
+    //                { garageSize = Console.ReadLine() }
+    //           elseif(vehType == "Bus"
+    //                { garageSize = Console.ReadLine() }
+    //            elseif(vehType == "Cars"
+    //                { garageSize = Console.ReadLine() }
+    //            elseif(vehType == "Helicopter"
+    //                { garageSize = Console.ReadLine() }
+    //            elseif(vehType == "Moped"
+    //                { garageSize = Console.ReadLine() }
+    //            elseif(vehType == "Motorcycle"
+    //                { garageSize = Console.ReadLine() }
+    //            elseif(vehType == "Van"
+    //                { garageSize = Console.ReadLine() }
+    //            else
+	   //         {
+    //                ;      
+    //            }
+    //        }
+    //}
     public void Park(T input)
         {
             if (count < capacity)

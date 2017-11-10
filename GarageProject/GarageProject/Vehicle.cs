@@ -18,12 +18,12 @@ namespace GarageProject
         private string model;
         private string color;
         private int numberOfWheels;
-        // private   
         public int numberOfSeats;
         private int numberOfEngines;
         private DateTime parkingTime;
         private DateTime unparkingTime;
         private float parkingPeriod;
+       
 
         public int Id { set { id = value; } get { return id; } }
         public string TheOwnerFName { set { theOwnerFName = value; } get { return theOwnerFName; } }
@@ -39,31 +39,7 @@ namespace GarageProject
         public DateTime UnparkingTime { set { unparkingTime = value; } get { return unparkingTime; } }
         public float ParkingPeriod { set { parkingPeriod = value; } get { return parkingPeriod; } }
 
-        //public Vehicle CreateParkedVehicle(int id, string type, string fName, string lName, string registrationNumber, string color, string model, int numberOfWheels, int numberOfSeats, int numberOfEngines /*DateTime parkingTime*/)
-        //{
-        //    Vehicle alfa = new Vehicle();
-        //    alfa.Id = id;
-        //    alfa.TheOwnerFName = fName;
-        //    alfa.TheOwnerLName = lName;
-        //    alfa.RegistrationNumber = registrationNumber;
-        //    alfa.Type = type;
-        //    alfa.Color = color;
-        //    alfa.NumberOfWheels = numberOfWheels;
-        //    alfa.NumberOfSeats = numberOfSeats;
-        //    alfa.NumberOfEngines = numberOfEngines;
-        //    //alfa.ParkingTime = parkingTime;
-        //    return alfa;
-        //}
-
-        //public string PrintParkedVehicle(Vehicle veh)
-        //{
-        //    return "The owner name: " + veh.TheOwnerFName + " " + veh.TheOwnerLName +
-        //           "\nRegistration Number: " + veh.RegistrationNumber + "\nType: " + veh.Type +
-        //           "\nColor: " + veh.Color + "\nNumber Of Wheels: " + veh.NumberOfWheels +
-        //            "\nNumber Of Seats: " + veh.NumberOfSeats + "\nNumber Of Engines: " + veh.NumberOfEngines +
-        //            "\nParking Time: " + veh.ParkingTime;
-
-        //}
+        
 
         public void SetId(Vehicle veh, int id)
         {
@@ -172,26 +148,27 @@ namespace GarageProject
             return veh.ParkingPeriod;
         }
 
-        public Vehicle CreateParkedVehicle(int id, string type, string fName, string lName, string registrationNumber, string color, string model, int numberOfWheels, int numberOfSeats, int numberOfEngines /*DateTime parkingTime*/)
+        public Vehicle (int id, string fName, string lName, string registrationNumber,  string color, string type, string model, int numberOfWheels, int numberOfSeats, int numberOfEngines, DateTime parkingTime, DateTime unparktime, float parkingperiod)
         {
-            Vehicle alfa = new Vehicle();
-            alfa.Id = id;
-            alfa.TheOwnerFName = fName;
-            alfa.TheOwnerLName = lName;
-            alfa.RegistrationNumber = registrationNumber;
-            alfa.Type = type;
-            alfa.Color = color;
-            alfa.NumberOfWheels = numberOfWheels;
-            alfa.NumberOfSeats = numberOfSeats;
-            alfa.NumberOfEngines = numberOfEngines;
-            //alfa.ParkingTime = parkingTime;
-            return alfa;
+            
+            Id = id;
+            TheOwnerFName = fName;
+            TheOwnerLName = lName;
+            RegistrationNumber = registrationNumber;
+            Type = type;
+            Color = color;
+            NumberOfWheels = numberOfWheels;
+            NumberOfSeats = numberOfSeats;
+            NumberOfEngines = numberOfEngines;
+            ParkingTime = parkingTime;
+            UnparkingTime = unparktime;
+            ParkingPeriod = parkingperiod;
         }
 
 
         public string PrintParkedVehicle(Vehicle veh)
         {
-            return "The owner name: " + veh.TheOwnerFName + " " + veh.TheOwnerLName +
+            return "Id: "+ veh.Id +"+\nThe owner name: " + veh.TheOwnerFName + " " + veh.TheOwnerLName +
                    "\nRegistration Number: " + veh.RegistrationNumber + "\nType: " + veh.Type +
                    "\nColor: " + veh.Color + "\nModel: " + veh.Model +
                     "\nNumber Of Wheels: " + veh.NumberOfWheels + "\nNumber Of Seats: " + veh.NumberOfSeats +
