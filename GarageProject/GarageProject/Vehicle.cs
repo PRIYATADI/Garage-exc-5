@@ -19,7 +19,7 @@ namespace GarageProject
         private string color;
         private int numberOfWheels;
         // private   
-        public  int numberOfSeats;
+        public int numberOfSeats;
         private int numberOfEngines;
         private DateTime parkingTime;
         private DateTime unparkingTime;
@@ -30,7 +30,7 @@ namespace GarageProject
         public string TheOwnerLName { set { theOwnerLName = value; } get { return theOwnerLName; } }
         public string RegistrationNumber { set { registrationNumber = value; } get { return registrationNumber; } }
         public string Type { set { type = value; } get { return type; } }
-        public string Model { set { model = value; } get { return model; } } 
+        public string Model { set { model = value; } get { return model; } }
         public string Color { set { color = value; } get { return color; } }
         public int NumberOfWheels { set { numberOfWheels = value; } get { return numberOfWheels; } }
         public int NumberOfSeats { set { numberOfSeats = value; } get { return numberOfSeats; } }
@@ -188,7 +188,7 @@ namespace GarageProject
             return alfa;
         }
 
-       
+
         public string PrintParkedVehicle(Vehicle veh)
         {
             return "The owner name: " + veh.TheOwnerFName + " " + veh.TheOwnerLName +
@@ -198,10 +198,6 @@ namespace GarageProject
                     "\nNumber Of Engines: " + veh.NumberOfEngines + "\nParking Time: " + veh.ParkingTime;
         }
 
-
-        //public Garage CreateGarage[20000]()
-
-         //Vehicle veh
-         //Console.WriteLine(Garage.Array.GetCapacity());
     }
+       
 }

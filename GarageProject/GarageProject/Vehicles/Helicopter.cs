@@ -8,8 +8,8 @@ namespace GarageProject.Vehicles
 {
     public class Helicopter : Vehicle
     {
-        private int helicSpeed;
+        private string helicType;
 
-        public int HelicSpeed { set { helicSpeed = value; } get { return helicSpeed; } }
+        public string HelicType { set { helicType = value; } get { return helicType; } }
     }
 }

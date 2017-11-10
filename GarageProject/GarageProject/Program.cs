@@ -11,13 +11,13 @@ namespace GarageProject
     {
         static void Main(string[] args)
         {
+           
+           //public abstract  void MainMenu();
 
-            //    public void MainMenu();
-
-            //    {
-            //            Vehicle cc = new Vehicle();
-            //cc.MainMenu();
-            //        }
+            {
+             UserInterface cc = new UserInterface();
+                cc.CreateMainMenu();
+            }
 
             //Vehicle vehicle = new Vehicle();
             //List<Vehicle> vehicleList = new List<Vehicle>();
@@ -35,8 +35,8 @@ namespace GarageProject
             //    Console.WriteLine(vehicle.PrintParkedVehicle(v));
             //}
 
-            //Console.ReadLine();
-            
+            Console.ReadLine();
+
 
         }
     }

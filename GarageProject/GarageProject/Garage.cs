@@ -17,6 +17,7 @@ namespace GarageProject
         //Console.WriteLine(" Introduce the maximum capacity of the new garage:  ");
 
         // int Maxcapacity;
+
         //Console.ReadLine();
         //Garage<T> garage = new Garage<T>();
 
@@ -28,6 +29,7 @@ namespace GarageProject
         private T[] garageArray;
         private int capacity;
         private int count;
+        private bool[] isParkingPlaceAvailable;
 
         /*
         * Both the Capacity and Count properties are made in such a way that the only
@@ -64,10 +66,26 @@ namespace GarageProject
         }
 
         /*
-        * Since count will always be one highter than the index of the last added
-        * garage vehicle, we can use count to add new vehicles to the end of the roster
-        */
-        public void Park(T input)
+       * Since count will always be one highter than the index of the last added
+       * garage vehicle, we can use count to add new vehicles to the end of the roster
+       */
+        //public Garage CreateGarage[20000]()
+
+        //Vehicle veh
+        //Console.WriteLine(Garage.Array.GetCapacity());
+        int MaxCapacity = 2500;
+        public Garage()
+        {
+            isParkingPlaceAvailable = new bool[MaxCapacity];
+            for (int i = 0; i < MaxCapacity; i++)
+            {
+                isParkingPlaceAvailable[i] = true;
+            }
+
+        }
+       
+    
+    public void Park(T input)
         {
             if (count < capacity)
             {
