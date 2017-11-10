@@ -14,17 +14,8 @@ namespace GarageProject
      */
     public class Garage<T> : IEnumerable<T> where T : Vehicle
     {
-        //Console.WriteLine(" Introduce the maximum capacity of the new garage:  ");
-
-        // int Maxcapacity;
-        //Console.ReadLine();
-        //Garage<T> garage = new Garage<T>();
-
-        //[20000]private T[] vehicleArray;[Maxcapacity]
 
 
-            //Garage vehicle = new Garage();
-   
         private T[] garageArray;
         private int capacity;
         private int count;
@@ -38,7 +29,7 @@ namespace GarageProject
         public int Capacity { get { return capacity; } }
         public int Count { get { return count; } private set { count = value; } }
 
-      
+
         public Garage(int capacity)
 
         {
@@ -46,14 +37,15 @@ namespace GarageProject
             * We make sure that the type of the in parameter "input" is of the type Vehicle/Car
             * or a child of it
               */
-           
-                garageArray = new T[capacity];
-            
+
+            garageArray = new T[capacity];
+
             /*
             * otherwise we ensure that in the garage will only be the founding vehicle
             */
-           
+
         }
+    
 
         /*
         * Since count will always be one highter than the index of the last added
@@ -81,10 +73,7 @@ namespace GarageProject
                     /*
                      * mistake and overly convoluted
                      */
-                    //for(int i = 1; i <garageArray.ToList().IndexOf(null);i++)
-                    //{
-
-                    //}
+                    
                     for (int i = id; i < capacity; i++)
                     {
                         if (garageArray[i + 1] != null && i + 1 != capacity)
@@ -104,11 +93,13 @@ namespace GarageProject
                 count--;
             }
         }
+
         /*
          * These functions are what lets us implement the IEnumerable interface
          * The yield return lets the function return multiple times without having to call 
          * the function again and again.
          */
+
         public IEnumerator<T> GetEnumerator()
         {
             for (int i = 0; i < count; i++)
@@ -123,7 +114,37 @@ namespace GarageProject
         }
 
     }
- }   
-        
-    
+}
+
+
+
+    public class Garage<T> where T : Vehicle
+{
+    public int NextId = 0;
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public List<T> Vehicles { get; set; }
+
+    private int nextId = 0;
+
+    public Garage(string name)
+    {
+        this.Id = NextId++;
+        this.Name = name;
+        this.Vehicles = new List<T>();
+    }
+
+    public Garage() : this("")
+    {
+    }
+
+
+
+    public override string ToString()
+    {
+
+        return string.Format("{0, 0}{1, 30} {2, 5}", Id, Name, Vehicles.Count);
+    }
+
+}
 
