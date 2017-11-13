@@ -85,7 +85,7 @@ namespace GarageProject
         {
             veh.ParkingTime = parkingTime;
         }
-        public void SetUnparkingTime(Vehicle veh, DateTime unparkingTime)
+        public void SetUnparkingTime(Vehicle veh, DateTime unParkingTime)
         {
             veh.UnparkingTime = unparkingTime;
         }
@@ -148,7 +148,13 @@ namespace GarageProject
             return veh.ParkingPeriod;
         }
 
-        public Vehicle (int id, string fName, string lName, string registrationNumber,  string color, string type, string model, int numberOfWheels, int numberOfSeats, int numberOfEngines, DateTime parkingTime, DateTime unparktime, float parkingperiod)
+        public Vehicle()
+        {
+
+        }
+
+        public Vehicle (int id, string fName, string lName, string registrationNumber,  string color, string type, string model, 
+            int numberOfWheels, int numberOfSeats, int numberOfEngines, DateTime parkingTime, DateTime unparkingTime, float parkingPeriod)
         {
             
             Id = id;
@@ -161,18 +167,27 @@ namespace GarageProject
             NumberOfSeats = numberOfSeats;
             NumberOfEngines = numberOfEngines;
             ParkingTime = parkingTime;
-            UnparkingTime = unparktime;
-            ParkingPeriod = parkingperiod;
+            UnparkingTime = unparkingTime;
+            ParkingPeriod = parkingPeriod;
         }
 
-
-        public string PrintParkedVehicle(Vehicle veh)
+        public virtual string VehicleInformations()
         {
-            return "Id: "+ veh.Id +"+\nThe owner name: " + veh.TheOwnerFName + " " + veh.TheOwnerLName +
-                   "\nRegistration Number: " + veh.RegistrationNumber + "\nType: " + veh.Type +
-                   "\nColor: " + veh.Color + "\nModel: " + veh.Model +
-                    "\nNumber Of Wheels: " + veh.NumberOfWheels + "\nNumber Of Seats: " + veh.NumberOfSeats +
-                    "\nNumber Of Engines: " + veh.NumberOfEngines + "\nParking Time: " + veh.ParkingTime;
+            return "Id: " + Id + "\nThe owner family name: " + TheOwnerFName + "\nThe owner name:  " + TheOwnerLName +
+                   "\nRegistration Number: " + RegistrationNumber + "\nType: " + Type +
+                   "\nColor: " + Color + "\nModel: " + Model +
+                    "\nNumber Of Wheels: " + NumberOfWheels + "\nNumber Of Seats: " + NumberOfSeats +
+                    "\nNumber Of Engines: " + NumberOfEngines + "\nParking Time: " + ParkingTime +
+                    "\nUnParking Time: " + UnparkingTime + "\nParking Period: " + ParkingPeriod;
+
+        //public virtual string PrintVehicleInformations(Vehicle veh)
+        //{
+        //    return "Id: " + veh.Id + "\nThe owner family name: " + veh.TheOwnerFName + "\nThe owner name:  " + veh.TheOwnerLName +
+        //           "\nRegistration Number: " + veh.RegistrationNumber + "\nType: " + veh.Type +
+        //           "\nColor: " + veh.Color + "\nModel: " + veh.Model +
+        //            "\nNumber Of Wheels: " + veh.NumberOfWheels + "\nNumber Of Seats: " + veh.NumberOfSeats +
+        //            "\nNumber Of Engines: " + veh.NumberOfEngines + "\nParking Time: " + veh.ParkingTime +
+        //            "\nUnParking Time: " + veh.UnparkingTime + "\nParking Period: " + veh.ParkingPeriod;
         }
 
     }

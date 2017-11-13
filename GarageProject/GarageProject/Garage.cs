@@ -29,13 +29,12 @@ namespace GarageProject
         private T[] garageArray;
         private int capacity;
         private int count;
-        private bool[] isParkingPlaceAvailable;
+        private bool[] isParkingPlaceAvailables;
 
         /*
-        * Both the Capacity and Count properties are made in such a way that the only
-        * thing other classes can do with them is to read the value that their linked feild
-        * contains
-        */
+        * Both the Capacity and Count properties are made in such a way that the only thing
+        *  other classes can do with them is to read the value that their linked field contains
+        */      
 
         public int Capacity { get { return capacity; } }
         public int Count { get { return count; } private set { count = value; } }
@@ -45,18 +44,19 @@ namespace GarageProject
 
         {
             /*
-            * We make sure that the type of the in parameter "input" is of the type Vehicle/Car
-            * or a child of it
-              */
-            if (typeof(Vehicle).IsAssignableFrom(input.GetType()))
-            {
-                capacity = ((input as Vehicle).numberOfSeats % 3) + 7;
-                garageArray = new T[capacity];
-            }
-            /*
-            * otherwise we ensure that in the garage will only be the founding vehicle
+            * We make sure that the garage will only be the founding vehicle
+            the type of the in-parameter "input" is of the type Vehicle or a child of it
+            * 
             */
-            else
+            if (typeof(Vehicle).IsAssignableFrom(input.GetType()))
+            //{
+            //    capacity = ((input as Vehicle).numberOfSeats % 3) + 7;
+            //    garageArray = new T[capacity];
+            //}
+            ///*
+            //* otherwise we ensure that in 
+            //*/
+            //else
             {
                 capacity = 1;
                 garageArray = new T[1];
@@ -69,14 +69,22 @@ namespace GarageProject
        * Since count will always be one highter than the index of the last added
        * garage vehicle, we can use count to add new vehicles to the end of the roster
        */
-        //public Garage CreateGarage[20000]()
+        //Creating garage with a set capacity 
 
-        //Vehicle veh
-        //Console.WriteLine(Garage.Array.GetCapacity());
-        int MaxCapacity = 2500;
+        public Garage(int maxSetCapacity)
+        {
+            Garage nrMaximVehicule = new Garage<T>
+            int maxCapacity = maxSetCapacity;
+            Console.WriteLine("\n *********************************************\n");
+            Console.WriteLine(" The capacity of the Garage");
+           
+            Console.WriteLine( "Garage has a capacity of: " );
+            int maxSetCapacity=Parse.int. Console.ReadLine();
+            //Console.WriteLine(Garage.Array.GetCapacity());
+        }
         public Garage()
         {
-            isParkingPlaceAvailable = new bool[MaxCapacity];
+            bool[] isParkingPlaceAvailable = new bool[MaxCapacity];
             for (int i = 0; i < MaxCapacity; i++)
             {
                 isParkingPlaceAvailable[i] = true;
@@ -84,31 +92,35 @@ namespace GarageProject
 
         }
 
-    //public int GarageSize(string vehType)
-    // {
-    //        { if (vehType == "Airplan")
-    //            {garageSize=Console.ReadLine() }
-    //           elseif (vehType == "Boat"
-    //                { garageSize = Console.ReadLine() }
-    //           elseif(vehType == "Bus"
-    //                { garageSize = Console.ReadLine() }
-    //            elseif(vehType == "Cars"
-    //                { garageSize = Console.ReadLine() }
-    //            elseif(vehType == "Helicopter"
-    //                { garageSize = Console.ReadLine() }
-    //            elseif(vehType == "Moped"
-    //                { garageSize = Console.ReadLine() }
-    //            elseif(vehType == "Motorcycle"
-    //                { garageSize = Console.ReadLine() }
-    //            elseif(vehType == "Van"
-    //                { garageSize = Console.ReadLine() }
-    //            else
-	   //         {
-    //                ;      
-    //            }
-    //        }
-    //}
-    public void Park(T input)
+        //public int GarageSize(string vehType)
+        // {
+        //        { if (vehType == "Airplan")
+        //            {garageSize=Console.ReadLine() }
+        //           elseif (vehType == "Boat"
+        //                { garageSize = Console.ReadLine() }
+        //           elseif(vehType == "Bus"
+        //                { garageSize = Console.ReadLine() }
+        //            elseif(vehType == "Cars"
+        //                { garageSize = Console.ReadLine() }
+        //            elseif(vehType == "Helicopter"
+        //                { garageSize = Console.ReadLine() }
+        //            elseif(vehType == "Moped"
+        //                { garageSize = Console.ReadLine() }
+        //            elseif(vehType == "Motorcycle"
+        //                { garageSize = Console.ReadLine() }
+        //            elseif(vehType == "Van"
+        //                { garageSize = Console.ReadLine() }
+        //            else
+        //         {
+        //                ;      
+        //            }
+        //        }
+        //}
+        /*
+        *Since count will always be one higher than the index of the last vehicle added in the garage, 
+        *we can use count to add new mwmbers to the end of the roster
+        */
+        public void Park(T input)
         {
             if (count < capacity)
             {
@@ -171,8 +183,56 @@ namespace GarageProject
             return GetEnumerator();
         }
 
+       
+            {
+                //Vehicle printList = new Vehicle();
+                //printList.PrintParkedVehicle(Vehicle veh);
+            }
+
+            //Vehicle vehicle = new Vehicle();
+            //List<Vehicle> vehicleList = new List<Vehicle>();
+            //vehicleList.Add(vehicle.CreateParkedVehicle)
+
+           
+            //foreach (Vehicle v in vehicleList)
+            //{
+            //    Console.WriteLine(vehicle.PrintParkedVehicle(v));
+            //}
+        
+        
+        //public class Garage<T> where T : Vehicle
+        //{
+        //    public int NextId = 0;
+        //    public int Id { get; set; }
+        //    public string Name { get; set; }
+        //    public List<T> Vehicles { get; set; }
+
+        //    private int nextId = 0;
+
+        //    public Garage(string name)
+        //    {
+        //        this.Id = NextId++;
+        //        this.Name = name;
+        //        this.Vehicles = new List<T>();
+        //    }
+
+        //    public Garage() : this("")
+        //    {
+        //    }
+
+
+
+        //    public override string ToString()
+        //    {
+
+        //        return string.Format("{0, 0}{1, 30} {2, 5}", Id, Name, Vehicles.Count);
+        //    }
+
+        //}
+
+
     }
- }   
+}   
         
     
 
