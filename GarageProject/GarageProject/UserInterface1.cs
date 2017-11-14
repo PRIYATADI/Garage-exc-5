@@ -14,8 +14,8 @@ namespace GarageProject
         public int MaximumRequiredCapacity;
         private Garage<Vehicle> entireCapacity;
 
-        public void CreateSubMenu()
-        {
+        //public void CreateSubMenu()
+        //{
             public void CreateNewGarage()
             {
                 Console.Clear();
@@ -55,7 +55,6 @@ namespace GarageProject
             }
 
 
-        }
+        
     }
 }
-

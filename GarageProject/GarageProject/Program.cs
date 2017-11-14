@@ -1,4 +1,4 @@
-﻿//using GarageProject.Vehicle;
+﻿using GarageProject.Vehicles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +22,7 @@ namespace GarageProject
             {  
                 //CreateNewGarage
                 UserInterface1 control1 = new UserInterface1();
-                control1.CreateSubMenu();
+                control1.CreateNewGarage();
               
             }
             Console.ReadLine();

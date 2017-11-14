@@ -114,7 +114,7 @@ namespace GarageProject
         public void NavigateThroughAllFunctionalityOfTheGarage()
         {
 
-            
+
 
             {
                 bool nav = true;
@@ -135,7 +135,7 @@ namespace GarageProject
                     //try
                     //{
                     //    char choise = Console.ReadLine()[0]; //Tries to set input to the first char in an input line
-                                                              
+
                     //}
                     //catch (IndexOutOfRangeException) //If the input line is empty, we ask the users for some input.
                     //{
@@ -148,40 +148,46 @@ namespace GarageProject
                     {
                         char iChoise = default(char);
                         switch (iChoise)
-                    {
-                        case '1':
-                            ListAllParkedVehicles();
-                            break;
-                        case '2':
-                            ListAllVehiclesTypesCurrentlyParkedInTheGarage();
-                            break;
-                        case '3':
-                            ParkSpecificVehiclesIntoTheGarage();
-                            break;
-                        case '4':
-                            UnparkSpecificVehiclesFromTheGarage();
-                            break;
-                        case '5':
-                              ;
-                            break;
-                        case '6':
-                            SearchAVehicleIntoOrFromTheGarage();
-                            break;
-                        case '7':
-                            ListAllVehiclesIntoOrFromTheGarageWithARequiredProperty();
-                            break;
-                        case '0':
-                            return;
-                        default:
-                            Console.WriteLine("Please enter some valid input (0, 1, 2, 3, 4, 5, 6, 7, 0)");
-                            Console.ReadLine();
-                            break;
+                        {
+                            case '1':
+                                ListAllParkedVehicles();
+                                break;
+                            case '2':
+                                ListAllVehiclesTypesCurrentlyParkedInTheGarage();
+                                break;
+                            case '3':
+                                ParkSpecificVehiclesIntoTheGarage();
+                                break;
+                            case '4':
+                                UnparkSpecificVehiclesFromTheGarage();
+                                break;
+                            case '5':
+                                ;
+                                break;
+                            case '6':
+                                SearchAVehicleIntoOrFromTheGarage();
+                                break;
+                            case '7':
+                                ListAllVehiclesIntoOrFromTheGarageWithARequiredProperty();
+                                break;
+                            case '0':
+                                return;
+                            default:
+                                Console.WriteLine("Please enter some valid input (0, 1, 2, 3, 4, 5, 6, 7, 0)");
+                                Console.ReadLine();
+                                break;
+                        }
                     }
                 }
                 while (nav);
+                }
             }
 
-        }
+
+
+    //    }
+
+    //}
 
 
      void ListAllParkedVehicles()
@@ -674,8 +680,5 @@ namespace GarageProject
                 //Console.ReadLine();
 
             }
-
-
-
-        }
     }
+}
