@@ -74,7 +74,7 @@ namespace GarageProject
         public Garage(int maxSetCapacity)
         {
             Garage nrMaximVehicule = new Garage<T>
-            int maxCapacity = maxSetCapacity;
+            int maxCapacity = maximumSetCapacity;
             Console.WriteLine("\n *********************************************\n");
             Console.WriteLine(" The capacity of the Garage");
            
