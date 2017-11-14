@@ -1,5 +1,5 @@
 ﻿
-//using GarageProject.Vehicle;
+using GarageProject.Vehicles;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -73,13 +73,10 @@ namespace GarageProject
 
         public Garage(int maxSetCapacity)
         {
-            Garage nrMaximVehicule = new Garage<T>
-            int maxCapacity = maximumSetCapacity;
-            Console.WriteLine("\n *********************************************\n");
-            Console.WriteLine(" The capacity of the Garage");
-           
-            Console.WriteLine( "Garage has a capacity of: " );
-            int maxSetCapacity=Parse.int. Console.ReadLine();
+            //Garage nrMaximVehicule = new Garage<T>
+
+            int maxCapacity = UserInterface1.maximumSetCapacity;
+          
             //Console.WriteLine(Garage.Array.GetCapacity());
         }
         public Garage()

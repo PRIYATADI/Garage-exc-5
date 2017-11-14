@@ -1,8 +1,10 @@
-﻿using System;
+﻿
+using GarageProject.Vehicles;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading.Tasks; 
 
 namespace GarageProject
 {
@@ -46,7 +48,7 @@ namespace GarageProject
                         NavigateThroughAllFunctionalityOfTheGarage();
                         break;
                     case 'B':
-                        CreateTheSizeOfTheGarage();
+                        CreateNewGarage();
                         break;
                     case 'C':
                         return;
@@ -70,8 +72,8 @@ namespace GarageProject
                     Console.WriteLine("Please navigate through the menu by inputting the number \n(0, 1, 2, 3 ,4, 5, 6, 7) of your choice"
                         + "\n1. List all parked vehicles"
                         + "\n2. List all vehicles types currently parked in the garage"
-                        + "\n3. Parc specific vehicles in the garage"
-                        + "\n4. Unparc specific vehicles from the garage"
+                        + "\n3. Park specific vehicles in the garage"
+                        + "\n4. Unpark specific vehicles from the garage"
                         + "\n5. Set maximum capacity (number of parking spaces in the garage) of the garage"
                         + "\n6. Search a vehicle depending on its properties in/from the garage"
                         + "\n7. List all vehicles in/from the garage with a required property"
@@ -96,13 +98,13 @@ namespace GarageProject
                             ListAllVehiclesTypesCurrentlyParkedInTheGarage();
                             break;
                         case '3':
-                            ParcSpecificVehiclesIntoTheGarage();
+                            ParkSpecificVehiclesIntoTheGarage();
                             break;
                         case '4':
-                            UnparcSpecificVehiclesFromTheGarage();
+                            UnparkSpecificVehiclesFromTheGarage();
                             break;
                         case '5':
-                            SetMaximumCapacityOfTheGarage();
+                              ;
                             break;
                         case '6':
                             SearchAVehicleIntoOrFromTheGarage();

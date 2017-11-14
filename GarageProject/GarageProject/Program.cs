@@ -17,8 +17,12 @@ namespace GarageProject
              UserInterface control = new UserInterface();
              control.CreateMainMenu();
             }
-        
+            Console.ReadLine();
 
+            {
+                UserInterface1 control1 = new UserInterface1();
+                control1.CreateNewGarage();
+            }
             Console.ReadLine();
 
 

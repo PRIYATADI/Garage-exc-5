@@ -180,7 +180,7 @@ namespace GarageProject
                     "\nNumber Of Engines: " + NumberOfEngines + "\nParking Time: " + ParkingTime +
                     "\nUnParking Time: " + UnparkingTime + "\nParking Period: " + ParkingPeriod;
 
-        //public virtual string PrintVehicleInformations(Vehicle veh)
+        public virtual string FindVehicleInformations(Vehicle veh)
         //{
         //    return "Id: " + veh.Id + "\nThe owner family name: " + veh.TheOwnerFName + "\nThe owner name:  " + veh.TheOwnerLName +
         //           "\nRegistration Number: " + veh.RegistrationNumber + "\nType: " + veh.Type +
