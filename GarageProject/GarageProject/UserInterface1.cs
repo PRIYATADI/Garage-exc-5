@@ -8,23 +8,54 @@ using System.Threading.Tasks;
 
 namespace GarageProject
 {
-    class UserInterface1:Vehicle
+    class UserInterface1 : Vehicle
     {
-        public void CreateNewGarage()
-        { 
-       
+        //Set maximum Capacity Of The Garage
+        public int MaximumRequiredCapacity;
+        private Garage<Vehicle> entireCapacity;
+
+        public void CreateSubMenu()
         {
-         //Set Maximum Capacity Of The Garage
-            { 
-            Console.WriteLine(" Type the capacity of the Garage, please.");
-            int maximumSetCapacity = int.Parse(Console.ReadLine());
-            Console.WriteLine("\n ***********************************************************\n");
-            Console.WriteLine( "New Garage created with a capacity of: " + maximumSetCapacity
-                                + "vehicles");
-            Console.WriteLine("\n ***********************************************************\n");
-            Console.ReadLine();
+            public void CreateNewGarage()
+            {
+                Console.Clear();
+                while (true)
+                {
+                    Console.Clear();
+                    Console.WriteLine("\n*************************Create Garage***************************\n");
+
+                    Console.WriteLine(" Type the capacity of the Garage, please.");
+                    string sMaximumSetCapacity = Console.ReadLine();
+                    while (!int.TryParse(sMaximumSetCapacity, out MaximumRequiredCapacity))
+                    {
+                        if (MaximumRequiredCapacity <= 0)
+                        {
+                            Console.WriteLine("Invalid input, try again, please!");
+                        }
+                        sMaximumSetCapacity = Console.ReadLine();
+                    }
+                    entireCapacity = new Garage<Vehicle>(MaximumRequiredCapacity);
+                    Console.ReadLine();
+                    Console.WriteLine("Press 0 to return to the main menu, please!");
+                    Console.WriteLine("Press 2 to recreate the garage");
+                    string newInput= Console.ReadLine();
+                    switch (newInput)
+                    {
+                        case "2";
+                            break;
+                        case "0";
+                            return;
+                        default:
+                            break;
+                    }
+
+                }
+
+
             }
-        }
+
+
         }
     }
 }
+

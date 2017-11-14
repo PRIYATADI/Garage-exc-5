@@ -22,8 +22,8 @@ namespace GarageProject.Vehicles
         public Bus(int id, string fName, string lName, string registrationNumber, string color, string type, string model,
             int numberOfWheels, int numberOfSeats, int numberOfEngines, DateTime parkingTime, DateTime unparkTime, float parkingPeriod, 
             int numberOfDoubleSeats, float height) :
-            base(id, fName, lName, registrationNumber, type, model,
-            color, numberOfWheels, numberOfSeats, numberOfEngines, parkingTime, unparkTime, parkingPeriod)
+            base(id, fName, lName, registrationNumber, type, model, color, numberOfWheels, numberOfSeats,
+             numberOfEngines, parkingTime, unparkTime, parkingPeriod)
 
         {
             Height = height;

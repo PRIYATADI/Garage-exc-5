@@ -8,9 +8,9 @@ namespace GarageProject.Vehicles
 {
     public class Van: Vehicle
     {
-        private bool withSpecialCabin;
+        private bool withSpecialPlacesForChildren;
        
-        public bool WithSpecialCabin { set { withSpecialCabin = value; } get { return withSpecialCabin; } }
+        public bool WithSpecialPlacesForChildren { set { withSpecialPlacesForChildren = value; } get { return withSpecialPlacesForChildren; } }
 
         public Van()
         {
@@ -18,18 +18,18 @@ namespace GarageProject.Vehicles
         }
 
         public Van(int id, string fName, string lName, string registrationNumber, string type, string model, int numberOfWheels, int numberOfSeats, int numberOfEngines,
-            string color, DateTime parkingTime, DateTime unparkingTime, float parkingPeriod, bool withSpecialCabin):
+            string color, DateTime parkingTime, DateTime unparkingTime, float parkingPeriod, bool withSpecialPlacesForChildren) :
          base(id, fName, lName, registrationNumber, type, model, color, numberOfWheels,
             numberOfSeats, numberOfEngines, parkingTime, unparkingTime, parkingPeriod)
 
         {
-            WithSpecialCabin = withSpecialCabin;
+            WithSpecialPlacesForChildren = withSpecialPlacesForChildren;
           
         }
 
         public override string VehicleInformations()
         {
-            return base.VehicleInformations() + "\nWith Special Cabin: " + WithSpecialCabin;
+            return base.VehicleInformations() + "\nWith Special Places For Children: " + WithSpecialPlacesForChildren;
         }
     }
 }

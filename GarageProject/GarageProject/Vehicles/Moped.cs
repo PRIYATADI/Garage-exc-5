@@ -8,10 +8,10 @@ namespace GarageProject.Vehicles
 {
     public class Moped : Vehicle
     {
-        private int length;
+        private float length;
         private string fuelType;
 
-        public int Length { set { length = value; } get { return length; } }
+        public float Length { set { length = value; } get { return length; } }
         public string FuelType { set { fuelType = value; } get { return fuelType; } }
         public Moped()
         {
@@ -19,7 +19,7 @@ namespace GarageProject.Vehicles
         }
 
         public Moped(int id, string fName, string lName, string registrationNumber,  string type, string model, string color,int numberOfWheels, 
-            int numberOfSeats, int numberOfEngines, DateTime parkingTime, DateTime unparkTime, float parkingperiod,int lenght, string fuelType) :
+            int numberOfSeats, int numberOfEngines, DateTime parkingTime, DateTime unparkTime, float parkingperiod, float lenght, string fuelType) :
             base(id, fName, lName, registrationNumber, type, model,
             color, numberOfWheels, numberOfSeats, numberOfEngines, parkingTime, unparkTime, parkingperiod)
         {

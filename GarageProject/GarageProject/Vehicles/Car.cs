@@ -9,12 +9,12 @@ namespace GarageProject.Vehicles
     public  class Car : Vehicle
     {
         private bool isDecapotabil;
-        private bool isAutomatic;
-        private bool harGear;
+        private string isAutomaticOrGear;
+      
 
         public bool IsDecapotabil { set { isDecapotabil = value; } get { return isDecapotabil; } }
-        public bool IsAutomatic { set { isAutomatic = value; } get { return isAutomatic; } }
-        public bool HarGear { set { harGear = value; } get { return harGear; } }
+        public string IsAutomaticOrGear { set { isAutomaticOrGear = value; } get { return isAutomaticOrGear; } }
+       
 
         public Car()
         {
@@ -23,18 +23,20 @@ namespace GarageProject.Vehicles
 
         public Car(int id, string fName, string lName, string registrationNumber, string type, string model,
             int numberOfWheels, int numberOfSeats, int numberOfEngines,
-            string color, DateTime parkingTime, DateTime unparkingTime, float parkingPeriod, bool isDecapotabil, bool isAutomatic, bool harGear) :
+            string color, DateTime parkingTime, DateTime unparkingTime, float parkingPeriod, bool isDecapotabil, 
+            string isAutomaticOrGearGear) :
         base(id, fName, lName, registrationNumber, type, model,
            color, numberOfWheels, numberOfSeats, numberOfEngines, parkingTime, unparkingTime, parkingPeriod)
         {
             IsDecapotabil = isDecapotabil;
-            IsAutomatic = isAutomatic;
-            HarGear = harGear;
+            IsAutomaticOrGear = isAutomaticOrGear;
+           
         }
        
         public override string VehicleInformations()
         {
-            return base.VehicleInformations() + "\n Is Decapotabil: " + IsDecapotabil + "\n Is Automatic: "+ IsAutomatic + "\n Har Gear: " + HarGear;
+            return base.VehicleInformations() + "\n Is Decapotabil: " + IsDecapotabil + 
+                "\n Is AutomaticOrGear: " + IsAutomaticOrGear;
         }
 
     }

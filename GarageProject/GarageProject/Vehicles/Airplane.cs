@@ -9,10 +9,10 @@ namespace GarageProject.Vehicles
 {
     public class Airplane : Vehicle
     {
-        private int wingsLength;
+        private float wingsLength;
         private int numberOfWindoors;
 
-        public int WingsLength { set { wingsLength = value; } get { return wingsLength; } }
+        public float WingsLength { set { wingsLength = value; } get { return wingsLength; } }
         public int NumberOfWindoors { set { numberOfWindoors = value; } get { return numberOfWindoors; } }
 
         public Airplane()
@@ -21,7 +21,7 @@ namespace GarageProject.Vehicles
         }
 
         public Airplane(int id, string fName, string lName, string registrationNumber, string type, string model, int numberOfWheels, int numberOfSeats, int numberOfEngines,
-            string color, DateTime parkingTime, DateTime unparkingTime, float parkingPeriod, int wingsLength, int numberOfWindoors):
+            string color, DateTime parkingTime, DateTime unparkingTime, float parkingPeriod, float wingsLength, int numberOfWindoors):
             base(id, fName, lName, registrationNumber, type, model,
            color, numberOfWheels, numberOfSeats, numberOfEngines, parkingTime, unparkingTime, parkingPeriod)
         {
