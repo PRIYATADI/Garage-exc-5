@@ -14,7 +14,7 @@ namespace GarageProject
 
         public int MaximumSetCapacity { get { return maxSetCapacity; } set { maxSetCapacity = value; } }
 
-        SetMaximumCapacityOfTheGarage()
+        public void SetMaximumCapacityOfTheGarage()
         {
             Garage<Vehicle> MaxSetCapacity = new Garage<Vehicle>(MaximumSetCapacity);
         }

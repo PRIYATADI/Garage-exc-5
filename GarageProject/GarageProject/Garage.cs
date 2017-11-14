@@ -190,49 +190,20 @@ namespace GarageProject
                     yield return nrVehicles[i];
                 }
             }
-            //IEnumerator IEnumerable.GetEnumerator()
-            //{
+        //IEnumerator IEnumerable.GetEnumerator()
+        //{
 
-            //    return GetEnumerator();
-            //}
+        //    return GetEnumerator();
+        //}
 
 
-            //Search a vehicle in the garage
-          public void SearchAVehicleIntoOrFromTheGarage()
-            {
+        //Search a vehicle in the garage
+        //public void SearchAVehicleIntoOrFromTheGarage()
+        //{
             public void SearchByModel(T mSearch)
             {
-            string searched = mSearch.Model;
-            var match = nrVehicles.Where(stc => stc.Model.Contains(searched));
-            int count = 0;
-            if (nrVehicles.Count == 0)
-            {
-                Console.WriteLine("There are no vehicles in the garage, so we can not search.");
-                Console.ReadLine();
-                return;
-            }
-
-            if (match != null && match.Any())
-
-            {
-                foreach (var veh in match)
-                {
-                    count++;
-                }
-                Console.WriteLine("There are " + count + " vehicles that are  " + searched + "model");
-                Console.ReadLine();
-            }
-            else
-            {
-                Console.WriteLine("There are not vehicles that matches the "+ searched + "criteria");
-                Console.ReadLine();
-            }
-
-        }
-            public void SearchByNumberOfWheels(T wSearch)
-            {
-                int searched = wSearch.NumberOfWheels;
-                var match = nrVehicles.Where(stc => stc.NumberOfWheels.Equals(searched));
+                string searched = mSearch.Model;
+                var match = nrVehicles.Where(stc => stc.Model.Contains(searched));
                 int count = 0;
                 if (nrVehicles.Count == 0)
                 {
@@ -248,7 +219,7 @@ namespace GarageProject
                     {
                         count++;
                     }
-                    Console.WriteLine("There are " + count + " vehicles that have  " + searched + "wheels");
+                    Console.WriteLine("There are " + count + " vehicles that are  " + searched + "model");
                     Console.ReadLine();
                 }
                 else
@@ -258,35 +229,65 @@ namespace GarageProject
                 }
 
             }
+        }
+            //public void SearchByNumberOfWheels(T wSearch)
+            //{
+            //    int searched = wSearch.NumberOfWheels;
+            //    var match = nrVehicles.Where(stc => stc.NumberOfWheels.Equals(searched));
+            //    int count = 0;
+            //    if (nrVehicles.Count == 0)
+            //    {
+            //        Console.WriteLine("There are no vehicles in the garage, so we can not search.");
+            //        Console.ReadLine();
+            //        return;
+            //    }
 
-            public void SearchBySeatNumber(T seatsSearch)
-            {
-                int searchedVeh = seatsSearch.NumberOfSeats;
-                var match = nrVehicles.Where(stc => stc.NumberOfSeats.Equals(searchedVeh));
-                int count = 0;
-                if (nrVehicles.Count == 0)
-                {
-                    Console.WriteLine("There are no vehicles in the garage, so we can not search.");
-                    return;
-                }
+            //    if (match != null && match.Any())
 
-                if (match != null && match.Any())
+            //    {
+            //        foreach (var veh in match)
+            //        {
+            //            count++;
+            //        }
+            //        Console.WriteLine("There are " + count + " vehicles that have  " + searched + "wheels");
+            //        Console.ReadLine();
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("There are not vehicles that matches the " + searched + "criteria");
+            //        Console.ReadLine();
+            //    }
 
-                {
-                    foreach (var veh in match)
-                    {
-                        count++;
-                    }
-                    Console.WriteLine("There are " + count + " vehicles that have  " + searchedVeh + "number of seats");
-                    Console.ReadLine();
-                }
-                else
-                {
-                    Console.WriteLine("There are not vehicles that matches the " + searchedVeh + "criteria");
-                    Console.ReadLine();
-                }
+            //}
 
-            }
+            //public void SearchBySeatNumber(T seatsSearch)
+            //{
+            //    int searchedVeh = seatsSearch.NumberOfSeats;
+            //    var match = nrVehicles.Where(stc => stc.NumberOfSeats.Equals(searchedVeh));
+            //    int count = 0;
+            //    if (nrVehicles.Count == 0)
+            //    {
+            //        Console.WriteLine("There are no vehicles in the garage, so we can not search.");
+            //        return;
+            //    }
+
+            //    if (match != null && match.Any())
+
+            //    {
+            //        foreach (var veh in match)
+            //        {
+            //            count++;
+            //        }
+            //        Console.WriteLine("There are " + count + " vehicles that have  " + searchedVeh + "number of seats");
+            //        Console.ReadLine();
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("There are not vehicles that matches the " + searchedVeh + "criteria");
+            //        Console.ReadLine();
+            //    }
+
+            //}
         }
 
     }
