@@ -19,10 +19,11 @@ namespace GarageProject.Vehicles
 
         }
 
-        public Motorcycle(int id, string fName, string lName, string registrationNumber, string type, string model, int numberOfWheels, int numberOfSeats, int numberOfEngines,
-                   string color, DateTime parkingTime, DateTime unparkingTime, float parkingPeriod, float speed, float motoLenght) :
-            base(id, fName, lName, registrationNumber, type, model,
-           color, numberOfWheels, numberOfSeats, numberOfEngines, parkingTime, unparkingTime, parkingPeriod)
+        public Motorcycle(int id, string fName, string lName, string registrationNumber, string type, string model, 
+                          int numberOfWheels, int numberOfSeats, int numberOfEngines, string color, DateTime parkingTime,
+                          DateTime unparkingTime, float parkingPeriod, float speed, float motoLenght):
+        base(id, fName, lName, registrationNumber, type, model, color, numberOfWheels,
+            numberOfSeats, numberOfEngines, parkingTime, unparkingTime, parkingPeriod)
         {
             Speed = speed;
             MotoLenght = motoLenght;
