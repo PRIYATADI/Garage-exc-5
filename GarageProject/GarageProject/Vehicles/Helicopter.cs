@@ -8,14 +8,12 @@ namespace GarageProject.Vehicles
 {
     public class Helicopter : Vehicle
     {
-        private string helicType;
         private int numberOfWings;
         private float width;
 
-        public string HelicType { set { helicType = value; } get { return helicType; } }
         public int NumberOfWings { set { numberOfWings = value; } get { return numberOfWings; } }
         public float Width { set { width = value; } get { return width; } }
-
+                
         public Helicopter()
         {
 

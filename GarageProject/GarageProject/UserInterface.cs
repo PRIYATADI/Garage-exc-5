@@ -16,7 +16,7 @@ namespace GarageProject
             do
             {
                 Console.WriteLine("Please navigate through the menu by inputting the number \n(0, 1, 2, 3 ,4, 5, 6, 7) of your choice"
-                    + "\n1. Set maximum capacity (number of parking spaces in the garage) of the garage"
+                    + "\n1. Create New Garage by Setting maximum capacity (number of parking spaces in the garage) of the garage"
                     + "\n2. Park specific vehicles in the garage"
                     + "\n3. Unpark specific vehicles from the garage"
                     + "\n4. List all vehicles types currently parked in the garage"
@@ -35,18 +35,15 @@ namespace GarageProject
                 //    //
                 //    Console.WriteLine("Please enter some input!");
                 //}
-                string sChoise = Console.ReadLine();
+                string Choise = Console.ReadLine();
                 int iChoice;
-                if (int.TryParse(sChoise, out iChoice))
+                if (int.TryParse(Choise, out iChoice))
                 {
-                    Console.WriteLine("Invalid input!");
-                    Console.ReadLine();
-                }
-                else break;
-
-
-
-                Console.Clear();
+                    //Console.WriteLine("Invalid input!");
+                    //Console.ReadLine();
+                //}
+                //else break;
+               // Console.Clear();
               
                 switch (iChoise)
                 {
@@ -72,72 +69,27 @@ namespace GarageProject
                         ListAllVehiclesInGarageWithARequiredProperty();
                         break;
                     case '0':
-
-                        return;
+                         return;
                     default:
                         Console.WriteLine("Please enter some valid input (0, 1, 2, 3, 4, 5, 6, 7, 0)");
                         Console.ReadLine();
                         break;
                 }
             }
-                }
-                while (nav);
-                }
-}
-        {
-            bool run = true;
-            while (run)
-            {
-                Console.Clear();
-                Console.WriteLine("Please navigate through the menu by inputting the string \n(1, 2, 0) of your choice"
-                    + "\n1. Navigate to all functionality of the garage"
-                    + "\n2. Create a new garage with a specific size"
-                    + "\n0. Close the application");
-
-
-                char input = ' '; //Creates the character input to be used with the switch-case below.
-                try
-                {
-                    input = Console.ReadLine()[0]; //Tries to set input to the first char in an input line
-                }
-                catch (IndexOutOfRangeException) //If the input line is empty, we ask the users for some input.
-                {
-                    Console.Clear();
-                    Console.WriteLine("Please enter your input!");
-                }
-                switch (input)
-                {
-                    case '1':
-                        NavigateThroughAllFunctionalityOfTheGarage();
-                        break;
-                    case '2':
-                        CreateNewGarage();
-                        break;
-                    case '0':
-                        return;
-                    default:
-                        Console.WriteLine("Please enter some valid input (0, 1, 2)");
-                        break;
-                }
-            }
-        }
-
-        //Create a new garage
-        //public void CreateNewGarage()
-
-        //{
-     
-              
-            public void CreateNewGarage()
-            {
-
-                Console.Clear();
-               //Set maximum Capacity Of The Garage
-                public int MaximumRequiredCapacity;
-                private Garage<Vehicle> entireCapacity;
+        }      
+        while (nav);
+    }   
+     //Create a new garage by        
+    //Setting maximum Capacity Of The Garage
+    public int MaximumRequiredCapacity;
+    private Garage<Vehicle> entireCapacity;
+    public void CreateNewGarage()
+     {
+         do 
+           {
+            Console.Clear();
                 Console.WriteLine("\n**********Create Garage****************\n");
-            do
-            {
+            
                 Console.WriteLine(" Type the capacity of the Garage, please.");
                 string sMaximumSetCapacity = Console.ReadLine();
                 while (!int.TryParse(sMaximumSetCapacity, out MaximumRequiredCapacity))
@@ -149,15 +101,15 @@ namespace GarageProject
                     sMaximumSetCapacity = Console.ReadLine();
                 }
                 entireCapacity = new Garage<Vehicle>(MaximumRequiredCapacity);
-            } while (true) ;
+           
 
                 Console.ReadLine();
                     Console.WriteLine("Press 0 to return to the main menu, please!");
-                    Console.WriteLine("Press 2 to recreate the garage");
+                    Console.WriteLine("Press 1 to recreate the garage");
                     string newInput = Console.ReadLine();
                     switch (newInput)
                     {
-                        case "2";
+                        case "1";
                             break;
                         case "0";
                             return;
@@ -165,42 +117,11 @@ namespace GarageProject
                             break;
                     }
 
-                }
-
-
-            }
-
-
-
-
-        Console.Clear();
-        //Navigate to all functionality of the garage 
-        public void NavigateThroughAllFunctionalityOfTheGarage()
-        {
-        Console.Clear();
-
-
-        
-
-
-
-    //    }
-
-    //}
-
-
-     void ListAllParkedVehicles()
-        {
-            ;
-        }
-
-    void ListAllVehiclesTypesCurrentlyParkedInTheGarage()
-        {
-            ;
-        }
-     void ParkSpecificVehiclesIntoTheGarage()
-
-            
+         } while (true) ;
+    }
+     
+    void ParkSpecificVehicle()
+           
                 {
                     Console.Clear();
 
@@ -222,8 +143,8 @@ namespace GarageProject
                              "Please input 7 to park a motorcycle\n" +
                              "Please input 8 to park a van\n" +
                              "Please input 0 to return to the main menu\n");
-                            string vehic = Console.ReadLine();
-                            Console.WriteLine(" You choose {0}\n", vehic);
+                            string input = Console.ReadLine();
+                            Console.WriteLine(" You choose {0}\n", input);
                             if (MaximumRequiredCapacity<=0)
                             {
                                 Console.Clear();
@@ -232,7 +153,7 @@ namespace GarageProject
                             }
                             else
                             {
-                                switch (vehic)
+                                switch (input)
                                 {
                                     //airplanes
                                     case "1": //child case of "+" case
@@ -376,7 +297,7 @@ namespace GarageProject
 
                                         entireCapacity.ParkSpecificVehiclesInGarage(newBus);
                                         break;
-                                    //boats
+                                  
                                    // cars
 
                                     case "4": //child case of "+" case
@@ -424,9 +345,9 @@ namespace GarageProject
                                         Console.WriteLine("Type if your car is automatic or gear, please! ");
                                         var myCarIsAutomaticOrGear = Console.ReadLine();
                                         newCar.IsAutomaticOrGear = myCarIsAutomaticOrGear;
-                                        
                                         entireCapacity.ParkSpecificVehiclesInGarage(newCar);
                                         break;
+                                      
                                     //helicopters
                                     case "5":
                                         Console.WriteLine("\n5. You want to display a helicopter ");
@@ -457,7 +378,7 @@ namespace GarageProject
                                         newHelicopter.Id = int.Parse(myHelicopterId);
                                         Console.WriteLine("Type the number of engines, please! ");
                                         var myHelicopternumberOfEngines = Console.ReadLine();
-                                        newAirplane.NumberOfEngines = int.Parse(myHelicopternumberOfEngines);
+                                        newHelicopter.NumberOfEngines = int.Parse(myHelicopternumberOfEngines);
                                         Console.WriteLine("Type the color, please! ");
                                         var myHelicoptercolor = Console.ReadLine();
                                         newAirplane.Color = myHelicoptercolor;
@@ -473,12 +394,11 @@ namespace GarageProject
                                         Console.WriteLine("Type the width, please! ");
                                         var myHelicopterWidth = Console.ReadLine();
                                         newHelicopter.Width = float.Parse(myHelicopterWidth);
-
                                         entireCapacity.ParkSpecificVehiclesInGarage(newHelicopter);
                                         break;
-
-                                    //moped
-
+                                     
+                                                                       
+                                //moped
                                     case "6": //child case of "+" case
                                         Console.WriteLine("\n6. You want to display a moped");
                                         Moped newMoped = new Moped();
@@ -524,9 +444,9 @@ namespace GarageProject
                                         Console.WriteLine("Type the FuelType, please!");
                                         var myMopedFuelType = Console.ReadLine();
                                         newMoped.FuelType = myMopedFuelType;
-
                                         entireCapacity.ParkSpecificVehiclesInGarage(newMoped);
                                         break;
+                                        
 
                                     //motorcycles
 
@@ -575,9 +495,9 @@ namespace GarageProject
                                         Console.WriteLine("Type the motocycle lenght, please!");
                                         var myMotorcyclemotoLenght = Console.ReadLine();
                                         newMotorcycle.MotoLenght = float.Parse(myMotorcyclemotoLenght);
-
                                         entireCapacity.ParkSpecificVehiclesInGarage(newMotorcycle);
                                         break;
+                                       
                                     //Vans
 
                                     case "8": //child case of "+" case
@@ -635,49 +555,38 @@ namespace GarageProject
                                     default://child case of "+" case
                                         Console.WriteLine("Invalid input, type only something from optins");
                                         break;
-
-                                        //
-
-
+                                     //
                                 }
                             }
 
-                            break;//
+                            break;//this is for +
 
                             //string choice1 = Console.ReadLine();
                     }
 
-            }
-            while (true);
+                }
+                while (true);
 
         }
-
-           
-             void UnparkSpecificVehiclesFromTheGarage()
+         
+    void UnparkSpecificVehicle()
             {
                 ;
             }
-
-             void SetMaximumCapacityOfTheGarage()
-            {
-                ;
-            }
-
-             void SearchAVehicleIntoOrFromTheGarage()
-            {
-                ;
-            }
-             void ListAllVehiclesIntoOrFromTheGarageWithARequiredProperty()
-            {
-                ;
-            }
-
-            //Create a new garage with a specific size
-            void CreateTheSizeOfTheGarage()
-            {
-                //Console.WriteLine("What is the garage maximum capacity?");
-                //
-
-            }
+    void ListAllParkedVehicles()
+        {
+            ;
+        }
+    void ListAllVehiclesTypesCurrentlyParked()
+        {
+            ;
+        }
+    void SearchAVehicleInGarage()
+    void ListAllVehiclesInGarageWithARequiredProperty()
+     {
+     ;
+     }
     }
+              
 }
+  

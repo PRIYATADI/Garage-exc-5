@@ -16,61 +16,11 @@ namespace GarageProject
 
         public void SetMaximumCapacityOfTheGarage()
         {
-            Garage<Vehicle> MaxSetCapacity = new Garage<Vehicle>(MaximumSetCapacity);
+            Garage<Vehicle> MaxSetCap = new Garage<Vehicle>(MaximumSetCapacity);
         }
     }
 
 }
-
-
-
-
-//public void MainMenu()
-//            {
-                
-                 
-//                Console.ReadLine();
-//                Console.Clear();
-//               Console.ReadLine();
-//                Console.Clear();
-
-//               Console.ReadLine();
-//            }
-//        }
-//    }
-
-
-
-
-
-
-
-
-
-
-    //public Vehicle CreateParkedVehicle(int id, string type, string fName, string lName, string registrationNumber, string color, int numberOfWheels, int numberOfSeats, int numberOfEngines /*DateTime parkingTime*/)
-    //    {
-    //        Vehicle alfa = new Vehicle();
-        //    alfa.Id = id;
-        //    alfa.TheOwnerFName = fName;
-        //    alfa.TheOwnerLName = lName;
-        //    alfa.RegistrationNumber = registrationNumber;
-        //    alfa.Type = type;
-        //    alfa.Color = color;
-        //    alfa.NumberOfWheels = numberOfWheels;
-        //    alfa.NumberOfSeats = numberOfSeats;
-        //    alfa.NumberOfEngines = numberOfEngines;
-        //    //alfa.ParkingTime = parkingTime;
-        //    return alfa;
-        //}
-
-        //public string PrintParkedVehicle(Vehicle veh)
-        //{
-        //    return "The owner name: " + veh.TheOwnerFName + " " + veh.TheOwnerLName +
-        //           "\nRegistration Number: " + veh.RegistrationNumber + "\nType: " + veh.Type +
-        //           "\nColor: " + veh.Color + "\nNumber Of Wheels: " + veh.NumberOfWheels +
-        //            "\nNumber Of Seats: " + veh.NumberOfSeats + "\nNumber Of Engines: " + veh.NumberOfEngines +
-        //            "\nParking Time: " + veh.ParkingTime;
 
 //}
 
@@ -92,29 +42,4 @@ namespace GarageProject
         //public Vehicle CreateParkedVehicle(int id, string type, string fName, string lName, string registrationNumber, string color, string model, int numberOfWheels, int numberOfSeats, int numberOfEngines /*DateTime parkingTime*/)
         //{
         //    Vehicle alfa = new Vehicle();
-        //    alfa.Id = id;
-        //    alfa.TheOwnerFName = fName;
-        //    alfa.TheOwnerLName = lName;
-        //    alfa.RegistrationNumber = registrationNumber;
-        //    alfa.Type = type;
-        //    alfa.Color = color;
-        //    alfa.NumberOfWheels = numberOfWheels;
-        //    alfa.NumberOfSeats = numberOfSeats;
-        //    alfa.NumberOfEngines = numberOfEngines;
-        //    //alfa.ParkingTime = parkingTime;
-        //    return alfa;
-        //}
-
-        //public string PrintParkedVehicle(Vehicle veh)
-        // Garage[] garageArray = new Garage[]();
-        //{
-        //    return "The owner name: " + veh.TheOwnerFName + " " + veh.TheOwnerLName +
-        //           "\nRegistration Number: " + veh.RegistrationNumber + "\nType: " + veh.Type +
-        //           "\nColor: " + veh.Color + "\nNumber Of Wheels: " + veh.NumberOfWheels +
-        //            "\nNumber Of Seats: " + veh.NumberOfSeats + "\nNumber Of Engines: " + veh.NumberOfEngines +
-        //            "\nParking Time: " + veh.ParkingTime;
-
-    //    }
-
-    //}
-//}
+        
